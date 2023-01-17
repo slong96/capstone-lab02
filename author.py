@@ -22,7 +22,7 @@ class Author:
     self.books = []
 
   def publish(self, title):
-    if title in self.books:
+    if str(title).lower() in str(self.books).lower():
       print(f'"{title}" is already in the list.')
     else:
       self.books.append(title)
@@ -40,7 +40,7 @@ def main():
   # author with books
   dr_seuss = Author('Dr. Seuss')
   dr_seuss.publish('Cat in the Hat')
-  dr_seuss.publish('Cat in the Hat')
+  dr_seuss.publish('cAt In tHe HAT')
   dr_seuss.publish('Green Eggs and Ham')
 
   # author with no books
