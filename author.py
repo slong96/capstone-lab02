@@ -22,7 +22,7 @@ class Author:
     self.books = []
 
   def publish(self, title):
-    if str(title).lower() in str(self.books).lower():
+    if str(title).lower().strip() in str(self.books).lower().strip():
       print(f'"{title}" is already in the list.')
     else:
       self.books.append(title)
